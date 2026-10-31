@@ -1,79 +1,141 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
-    font-family: poppins;
-    font-size: 40px;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: poppins;
+  font-size: 40px;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  background-image: url(images/cokes.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+/* 
+
+availabel fonts : Bakbak One , Bebas Neue , Black Ops One , Bodoni Moda, Bungee spice, caveat, crepster, germania one, great vibes, ibm plex mono, iceland, italianno, kaushan script, kranky , libre barcode 39 text, micro 5 charted, orbitron, pacifico, playfair display, playwrite de grund, playwrite vn, poppins, sofia, yuyu, zeyada, bricolage, grotesque, dm sans, philosopher, fjalla one , kelly slab, metrophobic, rochester, saira condensed, sirin stencil, ubuntu mono,
+*/
+
 .background {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    object-position: center;
-    z-index: -1;
-    position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+  position: fixed;
+  filter: blur(2px);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.texts,
+.qr {
+  border: 2px solid white;
+  background-color: rgba(255, 56, 56, 0.469);
+  border-radius: 20px;
+  padding: 30px;
+  row-gap: 10px;
+  margin: 10px;
+}
+.cokacola {
+  width: 50px;
+}
+
+.texts {
+  transition: all 1s;
+}
+
+.texts:hover {
+  scale: 1.01;
+}
+
+.glassy {
+  border: 2px solid hsla(0, 0%, 100%, 0.211);
+  background: hsla(0, 0%, 0%, 0.373);
+  backdrop-filter: blur(7px);
+  box-shadow: 0px 0px 20px rgba(0, 200, 255, 0.249);
+  color: rgb(20, 20, 20);
+  transition: all 0.3s;
+  border-radius: 30px;
+}
+
+.glassy:hover {
+  border: 2px solid hsl(0, 0%, 100%);
+  background: hsla(0, 0%, 0%, 0.373);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 10 10 8px 10px hsl(0, 0%, 0%);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
 
 .heading {
-    font-size: clamp(50px, 5vw, 100px);
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    padding: 20px;
-    text-shadow: 0px 10px 25px rgb(0, 0, 0);
+  font-size: clamp(50px, 5vw, 100px);
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  /* padding: 20px; */
+  font-family: "Bricolage Grotesque";
+  align-content: center;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
+.subheading {
+  font-size: clamp(20px, 3vw, 70px);
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.839);
+  font-family: "Metrophobic";
+  padding: 10px 0px;
 }
 
-.secondpart,
-.thirdpart {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+.verified {
+  width: 40px;
 }
 
-.container {
-    padding: 30px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-top: 70px;
+.quote {
+  font-size: clamp(15px, 2vw, 50px);
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.952);
+  font-family: "Rochester";
 }
 
 .scanner {
-    width: 220px;
+  width: 150px;
 }
 
-.cokeimage {
-    width: clamp(170px, 20vw, 400px);
-    object-position: center;
+.qr {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-family: "Bricolage Grotesque";
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.952);
+  }
 }
 
-
-.secondpart {
-    flex-direction: column;
+.ver {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rebeccapurple;
+  margin: 5px 0px;
+  border-radius: 10px;
 }
 
-.upiapps {
-    width: 200px;
-    border-radius: 20px;
-    border: 6px solid grey;
-}
-
-.author {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.finaltext {
-    font-size: 30px;
-    color: white;
-    text-shadow: 0px 10px 25px rgb(0, 0, 0);
+.afqr {
+  flex-direction: row;
 }
