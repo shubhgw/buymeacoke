@@ -16,25 +16,17 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 30px;
+  min-height: 100vh;
+  background-position: center;
 }
 
 /* 
 
 availabel fonts : Bakbak One , Bebas Neue , Black Ops One , Bodoni Moda, Bungee spice, caveat, crepster, germania one, great vibes, ibm plex mono, iceland, italianno, kaushan script, kranky , libre barcode 39 text, micro 5 charted, orbitron, pacifico, playfair display, playwrite de grund, playwrite vn, poppins, sofia, yuyu, zeyada, bricolage, grotesque, dm sans, philosopher, fjalla one , kelly slab, metrophobic, rochester, saira condensed, sirin stencil, ubuntu mono,
 */
-
-.background {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  object-position: center;
-  z-index: -1;
-  position: fixed;
-  filter: blur(2px);
-}
 
 .head {
   display: flex;
@@ -50,9 +42,6 @@ availabel fonts : Bakbak One , Bebas Neue , Black Ops One , Bodoni Moda, Bungee 
   padding: 30px;
   row-gap: 10px;
   margin: 10px;
-}
-.cokacola {
-  width: 50px;
 }
 
 .texts {
@@ -81,9 +70,11 @@ availabel fonts : Bakbak One , Bebas Neue , Black Ops One , Bodoni Moda, Bungee 
   color: rgb(0, 0, 0);
   font-weight: bold;
 }
-
+.cokacola {
+  width: 60px;
+}
 .heading {
-  font-size: clamp(50px, 5vw, 100px);
+  font-size: 60px;
   font-weight: bold;
   color: rgb(255, 255, 255);
   /* padding: 20px; */
@@ -92,7 +83,7 @@ availabel fonts : Bakbak One , Bebas Neue , Black Ops One , Bodoni Moda, Bungee 
 }
 
 .subheading {
-  font-size: clamp(20px, 3vw, 70px);
+  font-size: 40px;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.839);
   font-family: "Metrophobic";
@@ -104,14 +95,18 @@ availabel fonts : Bakbak One , Bebas Neue , Black Ops One , Bodoni Moda, Bungee 
 }
 
 .quote {
-  font-size: clamp(15px, 2vw, 50px);
+  font-size: 30px;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.952);
   font-family: "Rochester";
+  background-color: rgba(99, 255, 99, 0.425);
+  margin: 5px 0px;
+  border-radius: 10px;
+  padding: 2px 15px;
 }
 
 .scanner {
-  width: 150px;
+  width: 180px;
 }
 
 .qr {
@@ -139,3 +134,123 @@ availabel fonts : Bakbak One , Bebas Neue , Black Ops One , Bodoni Moda, Bungee 
 .afqr {
   flex-direction: row;
 }
+
+.end {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    padding: 10px;
+  }
+  .heading {
+    font-size: 50px;
+  }
+  .subheading {
+    font-size: 30px;
+  }
+  .quote {
+    font-size: 20px;
+  }
+
+  .qr {
+    padding: 15px 25px;
+  }
+
+  .qr p {
+    font-size: 20px;
+  }
+  .scanner {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .texts {
+    padding: 15px 25px;
+    align-items: center;
+    justify-content: center;
+  }
+  .texts .head {
+    flex-direction: column;
+  }
+  .heading {
+    font-size: 40px;
+  }
+  .subheading {
+    font-size: 20px;
+  }
+  .quote {
+    display: none;
+  }
+
+  .qr {
+    flex-direction: column;
+  }
+
+  .end {
+    display: inline-block;
+    width: 300px;
+    font-size: 25px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px 20px;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  body {
+    padding: 0px;
+  }
+  .texts .subheading {
+    width: 170px;
+    font-size: 16px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .qr p {
+    font-size: 15px;
+  }
+
+  .ver {
+    padding: 5px 10px;
+  }
+
+  .verified {
+    width: 25px;
+  }
+
+  .end {
+    font-size: 18px;
+    width: 200px;
+  }
+}
+
+/* @media only screen and (max-width: 530px) {
+  body {
+    padding: 10px;
+  }
+  .head {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .texts {
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    p {
+      display: inline-block;
+    }
+  }
+
+  .qr {
+    flex-direction: column;
+  }
+} */
