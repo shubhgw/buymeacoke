@@ -188,11 +188,13 @@ availabel fonts : Bakbak One , Bebas Neue , Black Ops One , Bodoni Moda, Bungee 
   }
 
   .end {
+    margin-top: 20px;
     display: inline-block;
     width: 300px;
     font-size: 25px;
-    border: 1px solid rgb(255, 255, 255);
+    /* border: 1px solid rgb(255, 255, 255); */
     padding: 10px 20px;
+    text-align: center;
   }
 }
 
